@@ -16,8 +16,16 @@ provider "aws" {
 resource "aws_instance" "app_server" {
   ami           = "ami-0928f4202481dfdf6" # AMI Ubuntu 22.04 LTS
   instance_type = "t2.micro"
-key_name = "iac-first-main-tf"
+  key_name      = "iac-first-main-tf"
+
+#    user_data = <<-EOF
+                #!/bin/bash
+#                cd /home/ubuntu
+#                echo "<h1>Feito com Terraform</h1>" > index.html
+#               nohup busybox httpd -f -p 8080 &
+#            EOF
+
   tags = {
-    Name = "First Instance"
+    Name = "Test Instance AWS"
   }
 }
