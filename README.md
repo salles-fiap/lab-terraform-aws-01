@@ -122,4 +122,3 @@ Diagrams
 Architecture Diagram
 
 Django Project Setup
-
