@@ -18,14 +18,14 @@ resource "aws_instance" "app_server" {
   instance_type = "t2.micro"
   key_name      = "iac-first-main-tf"
 
-#    user_data = <<-EOF
-                #!/bin/bash
-#                cd /home/ubuntu
-#                echo "<h1>Feito com Terraform</h1>" > index.html
-#               nohup busybox httpd -f -p 8080 &
-#            EOF
+  #    user_data = <<-EOF
+  #!/bin/bash
+  #                cd /home/ubuntu
+  #                echo "<h1>Feito com Terraform</h1>" > index.html
+  #               nohup busybox httpd -f -p 8080 &
+  #            EOF
 
   tags = {
-    Name = "Test Instance AWS"
+    Name = "Python + Ansible + Terraformc + AWS"
   }
 }
